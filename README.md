@@ -1,3 +1,3 @@
 
-Convert youtube to MP3
+Python TK Widget for converting youtube to MP3
 
