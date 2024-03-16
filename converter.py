@@ -73,8 +73,6 @@ class MyWindow:
     print(ret.stdout.decode())
 
 window=tk.Tk()
-print('WINDOW')
-print(window)
 mywin=MyWindow(window)
 window.title('Convert YouTube to MP3')
 window.geometry("=600x300+10+10")
