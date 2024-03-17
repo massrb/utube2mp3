@@ -64,10 +64,10 @@ class MyWindow:
     url=self.video_entry.get()
     output_dir = self.config['dir_path']
     print('URL:' + url)
-    self.message.delete('1.0', tk.END)
+    self.message.delete(1.0, tk.END)
     self.message.insert(1.0, 'extracted mp3 from video')
 
-    command = f"cd /tmp/tracks; rm *.mp3; yt-dlp  -x --audio-format mp3 '{url}'"
+    command = f"cd {output_dir}; rm *.mp3; yt-dlp  -x --audio-format mp3 '{url}'"
     print('Run: ' + command)
     ret = subprocess.run(command, capture_output=True, shell=True)
     print(ret.stdout.decode())
